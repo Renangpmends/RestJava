@@ -22,7 +22,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public User create(User userToCreate){
-        if(userRepository.existByAccountNumber(userToCreate.getAccount().getNumber())){
+        if(userRepository.existsByAccountNumber(userToCreate.getAccount().getNumber())){
             throw new IllegalArgumentException("A conta ja Existe");
         }
         return userRepository.save(userToCreate);

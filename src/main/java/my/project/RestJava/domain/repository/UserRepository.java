@@ -8,6 +8,6 @@ import  my.project.RestJava.domain.model.User;
 @Repository
 public interface UserRepository extends JpaRepository<User, Long>{
 
-    boolean existByAccountNumber(String accountNumber);
+    boolean existsByAccountNumber(String accountNumber);
 
 }
