@@ -4,7 +4,8 @@ import java.math.BigDecimal;
 
 import jakarta.persistence.*;
 
-@Entity(name = "tb_Card")
+@Entity
+@Table(name = "tb_Card")
 public class Card {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -13,7 +14,7 @@ public class Card {
     @Column(unique = true)
     private String number;
 
-    @Column(name = "available_limit", scale = 13, precision = 2)
+    @Column(name = "available_limit", precision = 13, scale = 2)
     private BigDecimal limit;
 
     public Long getId() {

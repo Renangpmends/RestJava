@@ -2,10 +2,10 @@ package my.project.RestJava.domain.model;
 
 import java.util.List;
 
-import jakarta.annotation.Generated;
 import jakarta.persistence.*;
 
-@Entity(name = "tb_user")
+@Entity
+@Table(name = "tb_user")
 public class User {
 
     @Id
